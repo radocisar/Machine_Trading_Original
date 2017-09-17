@@ -277,7 +277,7 @@ Public Class Data_Requests_Handlers_ma_5_10
 
         End If
 
-        'For testing GitHub
+        'For testing Git
 
         If i_Raising_Orders.position_opened = True Then
 
