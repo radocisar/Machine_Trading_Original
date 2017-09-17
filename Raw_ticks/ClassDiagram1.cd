@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Helper Classes">
+    <Position X="12.375" Y="0.5" Height="0.365" Width="1.044" />
+  </Comment>
+  <Class Name="Raw_ticks.Auto_open_trade_parameters" Collapsed="true">
+    <Position X="14.25" Y="1" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAABAAAAAAAAAAAAgAAAAAAAQAAAAIAAAAAAEAAAA=</HashCode>
+      <FileName>Auto_open_trade_parameters.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Conditions_analysis_ma_5_10" Collapsed="true">
+    <Position X="5.25" Y="3.75" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABAAAACIAAAAAAAAAAAAAAAABAAAA=</HashCode>
+      <FileName>Conditions_analysis_ma_5_10.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Connect" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAgAAAIAAAAAgAAAAAAAAAAAAEEAA=</HashCode>
+      <FileName>Connect.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Create_new_folder_for_cntrt" Collapsed="true">
+    <Position X="11.75" Y="1" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Create_new_folder_for_cntrt.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Current_time" Collapsed="true">
+    <Position X="0.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAACAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Current_time.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Data" Collapsed="true">
+    <Position X="2.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAANAAgCAAAAAAAAAAAAAAgAQAAAAAAQAAAQCBA=</HashCode>
+      <FileName>Data.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Data_Requests_Handlers_ma_5_10" Collapsed="true">
+    <Position X="5.25" Y="3" Width="2.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAIAAAAAA=</HashCode>
+      <FileName>Data_Requests_Handlers_ma_5_10.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Data_Requests_Handlers_write_to_file" Collapsed="true">
+    <Position X="2.25" Y="3" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAEAAAAAAAAAAAAAAAAAAAAgAAQAAAAAAAA=</HashCode>
+      <FileName>Data_Requests_Handlers_write_to_file.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.EWrapperImpl" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="6" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>eoGA8QAogACWQCAEBwAA6BIIAEMJQAXZKwCEGAggMCQ=</HashCode>
+      <FileName>EWrapperImpl.vb</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Raw_ticks.Execute" Collapsed="true">
+    <Position X="5.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAIAgAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>Execute.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Form1" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAIAEBIKQACBEAgACAACZCAgCGAAgAjAQABIEQgAA=</HashCode>
+      <FileName>Form1.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Functions" Collapsed="true">
+    <Position X="10" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAACAAAAIAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Functions.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.on_current_time_event" Collapsed="true">
+    <Position X="17.5" Y="4.75" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>on_current_time_event.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Requesting_Open_Orders" Collapsed="true">
+    <Position X="4" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAgAAAAAAEAAAAAAYAAAAAEAAEAAAAAAAAA=</HashCode>
+      <FileName>Requesting_Open_Orders.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.My.MyApplication" Collapsed="true">
+    <Position X="18" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.My.MySettings" Collapsed="true">
+    <Position X="18" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAABEAAAAABAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Raw_ticks.Raising_Orders" Collapsed="true">
+    <Position X="5.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAIIAAAAAAAAAAAAIACAAAAgAAAAA=</HashCode>
+      <FileName>Raising_Orders.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Module Name="Raw_ticks.My.MySettingsProperty" Collapsed="true">
+    <Position X="16.25" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Module Name="Raw_ticks.My.Resources.Resources" Collapsed="true">
+    <Position X="18" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Module>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
