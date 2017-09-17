@@ -277,6 +277,8 @@ Public Class Data_Requests_Handlers_ma_5_10
 
         End If
 
+        'For testing GitHub
+
         If i_Raising_Orders.position_opened = True Then
 
             If ma_ticks_arr(0) <> Nothing And MID_price <> 0 Then
