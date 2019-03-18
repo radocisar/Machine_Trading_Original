@@ -2,7 +2,7 @@
 Imports System.IO
 
 Public Class Data
-
+    adsfgasdfasdfasdfasdfasdf
     'Dim wrapper_imp As EWrapperImpl = New EWrapperImpl
     Dim cls_Data_Requests_Handlers_write_to_file As Data_Requests_Handlers_write_to_file = New Data_Requests_Handlers_write_to_file
     Dim cls_Data_Requests_Handlers_ma_5_10 As Data_Requests_Handlers_ma_5_10 = New Data_Requests_Handlers_ma_5_10
