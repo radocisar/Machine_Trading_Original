@@ -9,7 +9,7 @@ Public Class Form1
     Dim orders_cls As Requesting_Open_Orders = New Requesting_Open_Orders
     Dim i_raising_orders As Raising_Orders = New Raising_Orders
 
-    'Public WithEvents wrapper_events As New EWrapperImpl
+    'Public WithEvents Wrapper_events As New EWrapperImpl
     Public Shared auto_trading As Boolean
     Public Shared str_wrt_opened As Boolean
 

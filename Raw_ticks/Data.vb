@@ -6,11 +6,12 @@ Public Class Data
     'Dim wrapper_imp As EWrapperImpl = New EWrapperImpl
     Dim cls_Data_Requests_Handlers_write_to_file As Data_Requests_Handlers_write_to_file = New Data_Requests_Handlers_write_to_file
     Dim cls_Data_Requests_Handlers_ma_5_10 As Data_Requests_Handlers_ma_5_10 = New Data_Requests_Handlers_ma_5_10
+    'Dim cls_Data_Requests_Handlers_Bollinger_Bands As Data_Requests_Handlers_Bollinger_Bands = New Data_Requests_Handlers_Bollinger_Bands
     'Dim i_form1 As Form1 = New Form1
     'Public socket_client As EClientSocket = wrapper_imp.socketClient
     'Dim create_new_fldr_for_cntrt As Create_new_folder_for_cntrt = New Create_new_folder_for_cntrt
 
-    Dim WithEvents wrapper_events As New EWrapperImpl
+    Private WithEvents Wrapper_events As New EWrapperImpl
     Public file_path As String = "C:\Raw_Data\Raw_Tickstream\" & Functions.cntrt.Symbol
 
 #Region "Data Requests Raisers"
@@ -45,13 +46,13 @@ Public Class Data
 #Region "Data Requests Handlers"
 
 
-    Sub price_return_handler(tickerId As Integer, field As Integer, price As Double, canAutoExecute As Integer) Handles wrapper_events.on_price_return
+    Sub price_return_handler(tickerId As Integer, field As Integer, price As Double, canAutoExecute As Integer) Handles Wrapper_events.on_price_return
 
         If Form1.auto_trading = True Then
 
             '----- For FX data handling for trading
             Call cls_Data_Requests_Handlers_ma_5_10.mm_price_return_handler(tickerId, field, price, canAutoExecute)
-
+            'Call cls_Data_Requests_Handlers_Bollinger_Bands.mm_price_return_handler(tickerId, field, price, canAutoExecute)
         Else
 
             '----- For all instruments' data handling for raw ticks download
@@ -62,7 +63,7 @@ Public Class Data
 
     End Sub
 
-    Sub size_return_handler(tickerId As Integer, field As Integer, size As Double) Handles wrapper_events.on_size_return
+    Sub size_return_handler(tickerId As Integer, field As Integer, size As Double) Handles Wrapper_events.on_size_return
 
         If Form1.auto_trading = True Then
 
@@ -79,7 +80,7 @@ Public Class Data
 
     End Sub
 
-    Sub string_return_handler(tickerId As Integer, field As Integer, string_return As String) Handles wrapper_events.on_string_return
+    Sub string_return_handler(tickerId As Integer, field As Integer, string_return As String) Handles Wrapper_events.on_string_return
 
         If Form1.auto_trading = True Then
 

@@ -7,7 +7,7 @@ Public Class Connect
     Public socket_client As EClientSocket = wrapper_imp.socketClient
     Public Shared bool As Boolean
 
-    Dim WithEvents wrapper_events As New EWrapperImpl
+    Private WithEvents Wrapper_events As New EWrapperImpl
 
     'AddHandler() wrapper_events.on_current_time, AddressOf show_time
 

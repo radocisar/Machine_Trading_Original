@@ -131,6 +131,7 @@
     <Compile Include="Data.vb" />
     <Compile Include="Open_positions_cond_analysis_ma_5_10.vb" />
     <Compile Include="Open_str_wrt.vb" />
+    <Compile Include="Properties_Class.vb" />
     <Compile Include="Requesting_Open_Orders.vb" />
     <Compile Include="Raising_Orders.vb" />
   </ItemGroup>

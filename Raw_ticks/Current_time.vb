@@ -3,7 +3,7 @@
 
 Public Class Current_time
 
-    Dim WithEvents wrapper_events As New EWrapperImpl
+    Private WithEvents Wrapper_events As New EWrapperImpl
 
     Public Sub req_current_time()
 
@@ -17,7 +17,7 @@ Public Class Current_time
     End Sub
 
 
-    Sub show_time_handler(time As Long) Handles wrapper_events.on_current_time
+    Sub show_time_handler(time As Long) Handles Wrapper_events.on_current_time
 
         Dim dt As DateTime
 

@@ -15,8 +15,9 @@ Public Class Data_Requests_Handlers_ma_5_10
     Public end_very_first_time As Boolean
     Public ma_mixed_for_short_entry As Boolean
     Private ma_ticks_arr() As Double
-    Public BID_price As Double
-    Public ASK_price As Double
+    Private BID_price As Double
+    Private ASK_price As Double
+    'Public ma_5_10_position_opened As Boolean
 
     'For testing
     Public Shared first_trade As Boolean
@@ -122,8 +123,8 @@ Public Class Data_Requests_Handlers_ma_5_10
                 '-----Starts thread checking for whether opened long positions should be closed
                 'for testing
                 'i_Raising_Orders.position_opened = False
-
-                If i_Raising_Orders.position_opened = True Then
+                'i_Raising_Orders.position_opened
+                If Properties_Class.position_opened = True Then
                     i_Open_positions_cond_analysis_ma_5_10.ma_5_ticks_for_exit_calc = ma_5_ticks
                     i_Open_positions_cond_analysis_ma_5_10.ma_10_ticks_for_exit_calc = ma_10_ticks
                     i_Open_positions_cond_analysis_ma_5_10.price_for_exit_calc = ma_ticks_arr(10)
@@ -270,6 +271,8 @@ Public Class Data_Requests_Handlers_ma_5_10
         'for testing
         'i_Raising_Orders.position_opened = False
 
+        'If 
+
         'For Testing:
         If Raising_Orders.test_completed = True Then
 
@@ -278,8 +281,8 @@ Public Class Data_Requests_Handlers_ma_5_10
         End If
 
         'For testing Git 2 tst
-
-        If i_Raising_Orders.position_opened = True Then
+        'i_Raising_Orders.position_opened
+        If Properties_Class.position_opened = True Then
 
             If ma_ticks_arr(0) <> Nothing And MID_price <> 0 Then
 
@@ -310,7 +313,8 @@ Public Class Data_Requests_Handlers_ma_5_10
 
         'If ma_ticks_arr(7) <> Nothing And LAST_price <> "" Then
 
-        If i_Raising_Orders.position_opened = False Then
+        'i_Raising_Orders.position_opened
+        If Properties_Class.position_opened = False Then
 
             If ma_ticks_arr(0) <> Nothing And MID_price <> 0 Then
 
