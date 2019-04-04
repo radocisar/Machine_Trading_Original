@@ -3,10 +3,12 @@ Imports IBApi
 
 Public Class Raising_Orders
 
-    Dim WithEvents wrapper_events As New EWrapperImpl
-    Dim WithEvents Exec_wrapper_events As New Exec_EWrapperImpl
-    Public position_opened As Boolean
+    Private WithEvents Wrapper_events As New EWrapperImpl
+    Private WithEvents Exec_wrapper_events As New Exec_EWrapperImpl
+    'Public position_opened As Boolean
     Dim i_Requesting_Open_Orders As Requesting_Open_Orders = New Requesting_Open_Orders
+    'Dim i_Data_Requests_Handlers_ma_5_10 As Data_Requests_Handlers_ma_5_10 = New Data_Requests_Handlers_ma_5_10
+    'Dim i_Properties_Class As Properties_Class = New Properties_Class
     Dim i_connect As Connect = New Connect
     Dim i_EWrapperImpl As EWrapperImpl = New EWrapperImpl
     Public Shared Order_ID As Integer
@@ -39,6 +41,8 @@ Public Class Raising_Orders
         'Order_ID = 81
         'Order_ID = Order_ID + 1
 
+
+
         Form1.cnnt_cls.socket_client.placeOrder(Order_ID, Functions.cntrt, i_ordr)
 
     End Sub
@@ -53,7 +57,7 @@ Public Class Raising_Orders
 #Region "Orders Handlers"
 
     Sub ords_stts_handler(orderId As Integer, status As String, filled As Double, remaining As Double, avgFillPrice As Double, permId As Integer,
-                          parentId As Integer, lastFillPrice As Double, clientId As Integer, whyHeld As String) Handles wrapper_events.on_ords_status
+                          parentId As Integer, lastFillPrice As Double, clientId As Integer, whyHeld As String) Handles Wrapper_events.on_ords_status
 
         'MsgBox("Order Status:" & vbCrLf & "OrderStatus Id: " & orderId & vbCrLf & "Status: " & status & vbCrLf & "Filled: " & filled & vbCrLf & "Remaining: " & remaining &
         'vbCrLf & "AvgFillPrice: " & avgFillPrice & vbCrLf & "PermId: " & permId & vbCrLf & "ParentId: " & parentId & vbCrLf & "LastFillPrice: " & lastFillPrice &
@@ -78,28 +82,29 @@ Public Class Raising_Orders
 
         'str_wrt.Close()
 
-        'TODO Add filled order confirmation "status" and ensure this is only considered upon opening of a new position
+        'TODO Add filled order confirmation "status" And ensure this Is only considered upon opening of a New position
         If status = "Submitted" Or status = "PreSubmitted" And Execute.position_opened_or_closed = "Opened" Then
 
-            position_opened = True
+            'position_opened = True
+            Properties_Class.position_opened = True
 
         End If
         'TODO Add filled order confirmation "status" and ensure this is only considered upon exiting of position
         If status = "submitted" Or status = "PreSubmitted" And Execute.position_opened_or_closed = "Closed" Then
             'For testing
-            'position_opened = False
+            'Properties_Class.position_opened = False
             test_completed = True
         End If
 
     End Sub
 
-    Sub exec_details_handler(reqId As Integer, contract As IBApi.Contract, execution As IBApi.Execution) Handles wrapper_events.on_exec_details
+    Sub exec_details_handler(reqId As Integer, contract As IBApi.Contract, execution As IBApi.Execution) Handles Wrapper_events.on_exec_details
 
         MsgBox("ExecDetails:" & vbCrLf & "Req ID: " & reqId & vbCrLf & contract.Symbol & vbCrLf & contract.SecType & vbCrLf & "Price: " & execution.Price & vbCrLf & execution.Exchange)
 
     End Sub
 
-    Sub cmssn_rpt_handler(commissionReport As IBApi.CommissionReport) Handles wrapper_events.on_cmssn_rpt
+    Sub cmssn_rpt_handler(commissionReport As IBApi.CommissionReport) Handles Wrapper_events.on_cmssn_rpt
 
         MsgBox("CommissionReport:" & vbCrLf & "Commission: " & commissionReport.Currency & " " & commissionReport.Commission)
 
